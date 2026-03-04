@@ -1,0 +1,26 @@
+# Credentials & Secrets
+.credentials.json
+config.json
+
+# Runtime / Temp data
+cache/
+debug/
+downloads/
+file-history/
+history.jsonl
+ide/
+paste-cache/
+plans/
+shell-snapshots/
+stats-cache.json
+statsig/
+tasks/
+teams/
+telemetry/
+todos/
+usage-data/
+mcp-needs-auth-cache.json
+backups/
+projects/
+nul
+plugins/marketplaces/claude-plugins-official/

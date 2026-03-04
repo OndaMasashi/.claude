@@ -1,0 +1,102 @@
+{
+  "env": {
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
+  },
+  "permissions": {
+    "allow": [
+      "Bash(python:*)",
+      "Bash(pip install:*)",
+      "Bash(pip list:*)",
+      "Bash(pip freeze:*)",
+      "Bash(dir:*)",
+      "Bash(ls:*)",
+      "Bash(where:*)",
+      "Bash(type:*)",
+      "Bash(echo:*)",
+      "Bash(cd:*)",
+      "Bash(mkdir:*)",
+      "Bash(copy:*)",
+      "Bash(xcopy:*)",
+      "Bash(set:*)",
+      "Bash(node:*)",
+      "Bash(npm:*)",
+      "Bash(npx:*)",
+      "Bash(pandoc:*)",
+      "Bash(git status:*)",
+      "Bash(git log:*)",
+      "Bash(git diff:*)",
+      "Bash(git branch:*)",
+      "Bash(git checkout:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git stash:*)",
+      "Bash(git remote:*)",
+      "Bash(gh:*)",
+      "Bash(curl:*)",
+      "Bash(powershell:*)",
+      "Bash(cmd /c:*)",
+      "Bash(PYTHONIOENCODING=utf-8 \".venv/Scripts/python.exe\":*)",
+      "mcp__reverve-rag__semantic_search",
+      "Read(//tmp/claude/c--work-reverve-RAG-DB/tasks//**)",
+      "Read(//tmp/claude/c--work-reverve-RAG-DB/tasks/**)",
+      "Read(//c/**)",
+      "Bash(sort:*)",
+      "Bash(.venvScriptspython.exe scripts/ingest_all.py --only notebooklm)",
+      "mcp__reverve-rag__get_document",
+      "Bash(python3:*)",
+      "Bash(wc:*)",
+      "Bash(gemini.cmd:*)",
+      "Bash(findstr:*)",
+      "Read(//c/work/Kaggle_March_Machine_Learning_Mania_2026/**)",
+      "Bash(kaggle competitions list:*)",
+      "Bash(git -C \"c:/work/reverve_RAG_DB\" commit -m \"$\\(cat <<''EOF''\nAdd timeout settings and progress output for ingestion\n\n- Add configurable timeouts: nlm login \\(120s\\), MCP call_tool \\(60s\\), web fetch \\(30s\\)\n- Wrap all MCP client.call_tool\\(\\) with asyncio.wait_for\\(\\) to prevent indefinite hangs\n- Add per-notebook/per-source progress output during NotebookLM ingestion\n- Set trafilatura DOWNLOAD_TIMEOUT via use_config\\(\\) for web crawling\n- Add timeout fields to NotebookLMConfig and WebSourceConfig in config.py\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "WebFetch(domain:www.markmoog.com)",
+      "WebFetch(domain:the-odds-api.com)",
+      "WebFetch(domain:reverve-consulting.com)"
+    ],
+    "additionalDirectories": [
+      "\\tmp"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash ~/.claude/hooks/block-rm.sh"
+          },
+          {
+            "type": "command",
+            "command": "bash ~/.claude/hooks/log-bash.sh"
+          }
+        ]
+      }
+    ],
+    "Notification": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash ~/.claude/hooks/notify.sh"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash ~/.claude/hooks/auto-format.sh"
+          }
+        ]
+      }
+    ]
+  },
+  "model": "sonnet",
+  "autoUpdatesChannel": "latest"
+}
