@@ -1,0 +1,25 @@
+# 技術バージョン取得ソース定義
+# フォーマット: category<TAB>name<TAB>command
+# - command は stdout に「最新版1行」だけ吐くシェルパイプであること
+# - 新規追加はこのファイルに1行追加するだけ。update-tech-versions.sh の改修は不要
+# - 実行後 ~/.claude/tech-versions.md が自動再生成される
+Frontend Framework	Next.js	npm view next version
+Frontend Framework	React	npm view react version
+Frontend Framework	Vue	npm view vue version
+Frontend Framework	Nuxt	npm view nuxt version
+Frontend Framework	SvelteKit	npm view @sveltejs/kit version
+Frontend Framework	Vite	npm view vite version
+Styling	Tailwind CSS	npm view tailwindcss version
+Language / Runtime	TypeScript	npm view typescript version
+Language / Runtime	Node.js (Current)	gh release list -R nodejs/node -L 60 2>/dev/null | grep -i Current | head -1 | grep -oE 'v[0-9]+\.[0-9]+\.[0-9]+' | sed 's/^v//'
+Language / Runtime	Node.js (LTS)	gh release list -R nodejs/node -L 60 2>/dev/null | grep -i LTS | grep -oE 'v[0-9]+\.[0-9]+\.[0-9]+' | sort -V | tail -1 | sed 's/^v//'
+Language / Runtime	Python (Stable)	curl -s https://endoflife.date/api/python.json | python -c "import json,sys; print(next(x['latest'] for x in json.load(sys.stdin) if x['cycle']=='3.13'))"
+Language / Runtime	Python (Latest)	curl -s https://endoflife.date/api/python.json | python -c "import json,sys; print(next(x['latest'] for x in json.load(sys.stdin) if x['cycle']=='3.14'))"
+Language / Runtime	Bun	npm view bun version
+Language / Runtime	pnpm	npm view pnpm version
+Backend / API	FastAPI	pip index versions fastapi 2>/dev/null | head -1 | sed -E 's/.*\(([^)]*)\).*/\1/'
+Backend / API	Hono	npm view hono version
+AI SDK	@anthropic-ai/sdk	npm view @anthropic-ai/sdk version
+AI SDK	@anthropic-ai/claude-agent-sdk	npm view @anthropic-ai/claude-agent-sdk version
+AI SDK	anthropic (Python)	pip index versions anthropic 2>/dev/null | head -1 | sed -E 's/.*\(([^)]*)\).*/\1/'
+AI SDK	openai	npm view openai version

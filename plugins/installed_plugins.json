@@ -1,0 +1,55 @@
+{
+  "version": 2,
+  "plugins": {
+    "telegram@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "C:\\Users\\Masashi.Onda\\.claude\\plugins\\cache\\claude-plugins-official\\telegram\\6a1e6b419e29",
+        "version": "6a1e6b419e29",
+        "installedAt": "2026-03-21T15:12:50.767Z",
+        "lastUpdated": "2026-04-06T15:18:03.028Z",
+        "gitCommitSha": "61c0597779bd2d670dcd4fbbf37c66aa19eb2ce6"
+      }
+    ],
+    "code-simplifier@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "C:\\Users\\Masashi.Onda\\.claude\\plugins\\cache\\claude-plugins-official\\code-simplifier\\1.0.0",
+        "version": "1.0.0",
+        "installedAt": "2026-03-28T03:30:27.789Z",
+        "lastUpdated": "2026-03-28T03:30:27.789Z",
+        "gitCommitSha": "548bfa83750f4191adcb46ffa51b44f02e1ceaa7"
+      }
+    ],
+    "commit-commands@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "C:\\Users\\Masashi.Onda\\.claude\\plugins\\cache\\claude-plugins-official\\commit-commands\\6a1e6b419e29",
+        "version": "6a1e6b419e29",
+        "installedAt": "2026-03-28T03:30:27.789Z",
+        "lastUpdated": "2026-04-03T16:12:22.584Z",
+        "gitCommitSha": "548bfa83750f4191adcb46ffa51b44f02e1ceaa7"
+      }
+    ],
+    "code-review@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "C:\\Users\\Masashi.Onda\\.claude\\plugins\\cache\\claude-plugins-official\\code-review\\6a1e6b419e29",
+        "version": "6a1e6b419e29",
+        "installedAt": "2026-03-28T03:30:27.789Z",
+        "lastUpdated": "2026-04-03T16:12:22.581Z",
+        "gitCommitSha": "548bfa83750f4191adcb46ffa51b44f02e1ceaa7"
+      }
+    ],
+    "hookify@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "C:\\Users\\Masashi.Onda\\.claude\\plugins\\cache\\claude-plugins-official\\hookify\\6a1e6b419e29",
+        "version": "6a1e6b419e29",
+        "installedAt": "2026-03-28T03:30:27.789Z",
+        "lastUpdated": "2026-04-03T16:12:22.579Z",
+        "gitCommitSha": "548bfa83750f4191adcb46ffa51b44f02e1ceaa7"
+      }
+    ]
+  }
+}

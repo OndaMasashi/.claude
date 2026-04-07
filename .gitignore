@@ -1,6 +1,8 @@
 # Credentials & Secrets
 .credentials.json
 config.json
+.env
+**/.env
 
 # Runtime / Temp data
 cache/
