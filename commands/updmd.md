@@ -1,6 +1,6 @@
 ---
 allowed-tools: Bash(git log:*), Bash(git status:*), Bash(git diff:*), Bash(ls:*), Bash(find:*), Bash(wc:*), Read, Edit, Write, Glob, Grep
-description: プロジェクト内の各種 MD ファイル（CLAUDE.md / README.md / INDEX.md / memory/）を現状に合わせて更新する
+description: プロジェクト内の各種 MD ファイル（CLAUDE.md / README.md / INDEX.md / ROADMAP.md / memory/）を現状に合わせて更新する
 ---
 
 ## Context
@@ -19,7 +19,8 @@ description: プロジェクト内の各種 MD ファイル（CLAUDE.md / README
 1. **CLAUDE.md**（プロジェクトルート）— 構造・運用手順・規約の最新化
 2. **README.md**（プロジェクトルート）— 概要・セットアップ・使い方の最新化
 3. **INDEX.md**（`docs/` `docs_ja/` 等の配下に存在する場合）— ファイル一覧・ページ数・取得日の最新化
-4. **memory/** 配下（`~/.claude/projects/{project-slug}/memory/` の MEMORY.md + `*.md`）— 今セッションで判明した知見・参照先の追加
+4. **ROADMAP.md / ROADMAP.*.md / roadmap.md** およびそれに準ずるファイル（`PLAN.md`, `MILESTONES.md`, `TODO.md`, `plan.md`, `docs/roadmap/*.md` 等）— マイルストーン達成状況・次ステップ・優先度の最新化
+5. **memory/** 配下（`~/.claude/projects/{project-slug}/memory/` の MEMORY.md + `*.md`）— 今セッションで判明した知見・参照先の追加
 
 ### 手順
 
@@ -33,6 +34,7 @@ description: プロジェクト内の各種 MD ファイル（CLAUDE.md / README
    - ページ数・取得日・バージョン等の数字のズレ
    - README.md の概要・セットアップ手順の古さ
    - INDEX.md のページ数・更新日・新規ページ
+   - ROADMAP / PLAN / MILESTONES のマイルストーン達成状況・未消化タスク・優先順位変更（直近コミットや完了済み PR から逆算して `[ ]` → `[x]` 更新、不要になった項目の削除）
    - memory/MEMORY.md の更新履歴表に追記すべき新しい作業、または新しく判明した "非自明な知見"（コードを読めば分かることは保存しない）
 
 3. **更新の実行**
