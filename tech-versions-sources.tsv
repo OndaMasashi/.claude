@@ -23,3 +23,7 @@ AI SDK	@anthropic-ai/sdk	npm view @anthropic-ai/sdk version
 AI SDK	@anthropic-ai/claude-agent-sdk	npm view @anthropic-ai/claude-agent-sdk version
 AI SDK	anthropic (Python)	pip index versions anthropic 2>/dev/null | head -1 | sed -E 's/.*\(([^)]*)\).*/\1/'
 AI SDK	openai	npm view openai version
+# Anthropic Models: 公開レジストリがないため echo で手動管理。新モデル発表時にこの3行を更新して bash ~/.claude/scripts/update-tech-versions.sh を実行
+Anthropic Models	Claude Opus	echo 4.7
+Anthropic Models	Claude Sonnet	echo 4.6
+Anthropic Models	Claude Haiku	echo 4.5

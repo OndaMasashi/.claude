@@ -4,10 +4,10 @@
     "telegram@claude-plugins-official": [
       {
         "scope": "user",
-        "installPath": "C:\\Users\\Masashi.Onda\\.claude\\plugins\\cache\\claude-plugins-official\\telegram\\0.0.5",
-        "version": "0.0.5",
+        "installPath": "C:\\Users\\Masashi.Onda\\.claude\\plugins\\cache\\claude-plugins-official\\telegram\\0.0.6",
+        "version": "0.0.6",
         "installedAt": "2026-03-21T15:12:50.767Z",
-        "lastUpdated": "2026-04-11T05:51:31.927Z",
+        "lastUpdated": "2026-04-15T03:21:14.044Z",
         "gitCommitSha": "61c0597779bd2d670dcd4fbbf37c66aa19eb2ce6"
       }
     ],
@@ -24,30 +24,30 @@
     "commit-commands@claude-plugins-official": [
       {
         "scope": "user",
-        "installPath": "C:\\Users\\Masashi.Onda\\.claude\\plugins\\cache\\claude-plugins-official\\commit-commands\\911091e41242",
-        "version": "911091e41242",
+        "installPath": "C:\\Users\\Masashi.Onda\\.claude\\plugins\\cache\\claude-plugins-official\\commit-commands\\d43bd64216d7",
+        "version": "d43bd64216d7",
         "installedAt": "2026-03-28T03:30:27.789Z",
-        "lastUpdated": "2026-04-11T06:47:01.587Z",
+        "lastUpdated": "2026-04-17T16:31:31.719Z",
         "gitCommitSha": "548bfa83750f4191adcb46ffa51b44f02e1ceaa7"
       }
     ],
     "code-review@claude-plugins-official": [
       {
         "scope": "user",
-        "installPath": "C:\\Users\\Masashi.Onda\\.claude\\plugins\\cache\\claude-plugins-official\\code-review\\911091e41242",
-        "version": "911091e41242",
+        "installPath": "C:\\Users\\Masashi.Onda\\.claude\\plugins\\cache\\claude-plugins-official\\code-review\\d43bd64216d7",
+        "version": "d43bd64216d7",
         "installedAt": "2026-03-28T03:30:27.789Z",
-        "lastUpdated": "2026-04-11T06:47:01.593Z",
+        "lastUpdated": "2026-04-17T16:31:31.726Z",
         "gitCommitSha": "548bfa83750f4191adcb46ffa51b44f02e1ceaa7"
       }
     ],
     "hookify@claude-plugins-official": [
       {
         "scope": "user",
-        "installPath": "C:\\Users\\Masashi.Onda\\.claude\\plugins\\cache\\claude-plugins-official\\hookify\\911091e41242",
-        "version": "911091e41242",
+        "installPath": "C:\\Users\\Masashi.Onda\\.claude\\plugins\\cache\\claude-plugins-official\\hookify\\d43bd64216d7",
+        "version": "d43bd64216d7",
         "installedAt": "2026-03-28T03:30:27.789Z",
-        "lastUpdated": "2026-04-11T06:47:01.607Z",
+        "lastUpdated": "2026-04-17T16:31:31.724Z",
         "gitCommitSha": "548bfa83750f4191adcb46ffa51b44f02e1ceaa7"
       }
     ]

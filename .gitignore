@@ -32,3 +32,4 @@ plugins/install-counts-cache.json
 
 # Machine-specific config (template only)
 channels/telegram/access.json
+channels/telegram/bot.pid

@@ -54,6 +54,10 @@
 | CLAUDE.md Improver | claude-md-improver | CLAUDE.md監査, メモリ最適化 | CLAUDE.mdファイルの品質監査・改善提案 |
 | Claude API | claude-api | Claude API, Anthropic SDK, Agent SDK | |
 | ML Data Guardian | ml-data-guardian | 特徴量検証, 提出前チェック, パイプライン実行 | MLパイプラインのtrain/test整合性チェックを能動的に提案 |
+| Test Strategy | test-strategy | テスト戦略, テスト計画, 新規開発, 品質向上, プランモードでテスト観点, カバレッジ改善 | 新規PJ立ち上げ・Plan Modeでテスト戦略（ピラミッド・静的解析・CI・補強領域の採否）を考慮観点として提示 |
+| Subagent-Driven Development | subagent-driven-development | サブエージェント並列実装, 実装プラン分散実行, 二段階レビュー | 実装プランの独立タスクをサブエージェントに分散→spec/code品質の二段階レビューで高速反復 |
+| Systematic Debugging | systematic-debugging | バグ調査, 体系的デバッグ, 根本原因分析, テスト失敗の調査 | バグ・テスト失敗の前にPhase1で根本原因を特定→症状だけのfixを禁ずる4段階プロセス |
+| Verification Before Completion | verification-before-completion | 完了前検証, 証拠ベース完了確認, PR前チェック | 完了/PR/コミット前に検証コマンドを実行して出力を確認、証拠なしでの成功宣言を禁止 |
 
 ## Creative
 

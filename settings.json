@@ -1,20 +1,39 @@
 {
   "env": {
     "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1",
-    "CLAUDE_CODE_SUBPROCESS_ENV_SCRUB": "1"
+    "CLAUDE_CODE_SUBPROCESS_ENV_SCRUB": "1",
+    "CLAUDE_CODE_ENABLE_AWAY_SUMMARY": "1"
   },
   "permissions": {
     "allow": [
       "Bash",
+      "PowerShell",
+      "Edit",
+      "Write",
+      "MultiEdit",
+      "Read",
+      "Grep",
+      "Glob",
+      "Monitor",
       "WebFetch",
+      "WebSearch",
       "mcp__reverve-rag__semantic_search",
       "mcp__reverve-rag__get_document",
-      "Read(//tmp/claude/c--work-reverve-RAG-DB/tasks/**)",
-      "Read(//c/**)",
-      "Edit(//**/*.xml)",
-      "Write(//**/*.xml)",
-      "Edit(//**/*.output)",
-      "Write(//**/*.output)"
+      "mcp__chrome-devtools__take_snapshot"
+    ],
+    "deny": [
+      "Edit(c:/Users/Masashi.Onda/.claude/settings.json)",
+      "Write(c:/Users/Masashi.Onda/.claude/settings.json)",
+      "Edit(/c/Users/Masashi.Onda/.claude/settings.json)",
+      "Write(/c/Users/Masashi.Onda/.claude/settings.json)",
+      "Edit(c:/Users/Masashi.Onda/.claude/settings.local.json)",
+      "Write(c:/Users/Masashi.Onda/.claude/settings.local.json)",
+      "Edit(/c/Users/Masashi.Onda/.claude/settings.local.json)",
+      "Write(/c/Users/Masashi.Onda/.claude/settings.local.json)",
+      "Edit(c:/Users/Masashi.Onda/.claude/CLAUDE.md)",
+      "Write(c:/Users/Masashi.Onda/.claude/CLAUDE.md)",
+      "Edit(/c/Users/Masashi.Onda/.claude/CLAUDE.md)",
+      "Write(/c/Users/Masashi.Onda/.claude/CLAUDE.md)"
     ],
     "additionalDirectories": [
       "\\tmp"
@@ -31,12 +50,26 @@
           },
           {
             "type": "command",
+            "command": "bash ~/.claude/hooks/block-direct-worktree-remove.sh"
+          },
+          {
+            "type": "command",
             "command": "bash ~/.claude/hooks/log-bash.sh"
           },
           {
             "type": "command",
             "command": "bash ~/.claude/hooks/block-secrets.sh",
             "statusMessage": "Checking for sensitive files..."
+          }
+        ]
+      },
+      {
+        "matcher": "PowerShell",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash ~/.claude/hooks/block-ps-destructive.sh",
+            "statusMessage": "Checking PowerShell command..."
           }
         ]
       },
@@ -83,7 +116,6 @@
       }
     ]
   },
-  "autoUpdatesChannel": "latest",
   "enabledPlugins": {
     "telegram@claude-plugins-official": true,
     "code-simplifier@claude-plugins-official": true,
@@ -91,5 +123,7 @@
     "code-review@claude-plugins-official": true,
     "hookify@claude-plugins-official": true
   },
-  "effortLevel": "max"
+  "effortLevel": "max",
+  "autoUpdatesChannel": "latest",
+  "showThinkingSummaries": true
 }
