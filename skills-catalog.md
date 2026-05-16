@@ -58,6 +58,10 @@
 | Subagent-Driven Development | subagent-driven-development | サブエージェント並列実装, 実装プラン分散実行, 二段階レビュー | 実装プランの独立タスクをサブエージェントに分散→spec/code品質の二段階レビューで高速反復 |
 | Systematic Debugging | systematic-debugging | バグ調査, 体系的デバッグ, 根本原因分析, テスト失敗の調査 | バグ・テスト失敗の前にPhase1で根本原因を特定→症状だけのfixを禁ずる4段階プロセス |
 | Verification Before Completion | verification-before-completion | 完了前検証, 証拠ベース完了確認, PR前チェック | 完了/PR/コミット前に検証コマンドを実行して出力を確認、証拠なしでの成功宣言を禁止 |
+| BigQuery Basics | bigquery-basics | BigQuery, BQ, データセット, BigQuery ML | GCP BigQueryのデータセット/テーブル/ジョブ操作・SQL・BQML・Gemini連携 |
+| GCP WAF: Cost Optimization | google-cloud-waf-cost-optimization | GCPコスト最適化, FinOps, Well-Architected | Google Cloud Well-Architected Frameworkコスト最適化柱の設計指針 |
+| GCP WAF: Reliability | google-cloud-waf-reliability | GCP信頼性設計, SRE, Well-Architected | Google Cloud Well-Architected Framework信頼性柱の設計指針 |
+| GCP WAF: Security | google-cloud-waf-security | GCPセキュリティ設計, IAM, Well-Architected | Google Cloud Well-Architected Frameworkセキュリティ柱の設計指針 |
 
 ## Creative
 
