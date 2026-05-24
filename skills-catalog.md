@@ -62,6 +62,7 @@
 | GCP WAF: Cost Optimization | google-cloud-waf-cost-optimization | GCPコスト最適化, FinOps, Well-Architected | Google Cloud Well-Architected Frameworkコスト最適化柱の設計指針 |
 | GCP WAF: Reliability | google-cloud-waf-reliability | GCP信頼性設計, SRE, Well-Architected | Google Cloud Well-Architected Framework信頼性柱の設計指針 |
 | GCP WAF: Security | google-cloud-waf-security | GCPセキュリティ設計, IAM, Well-Architected | Google Cloud Well-Architected Frameworkセキュリティ柱の設計指針 |
+| Multi-Axis Audit | multi-axis-audit | 監査, audit, 総合監査, Sprint末監査, branch監査, 全コードレビュー, コード監査, 異視座監査, 多軸監査, 盲点洗い出し, セキュリティ監査, リファクタ前監査, 規制対応監査, サプライチェーン監査, compliance check | **監査系リクエストの第一選択**。9 大カテゴリ 75 軸 menu (--all/--top10/Cn/M-XXX/--tags/--filter/--meta-only) で軸選択、並列 sub-agent dispatch (Round 制御, 並列 5 default / max 7)、HIGH spot-check、memory snapshot + ROADMAP + improvement_list 生成 |
 
 ## Creative
 

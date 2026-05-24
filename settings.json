@@ -36,7 +36,9 @@
       "Write(/c/Users/Masashi.Onda/.claude/CLAUDE.md)"
     ],
     "additionalDirectories": [
-      "\\tmp"
+      "\\tmp",
+      "C:\\Users\\Masashi.Onda\\AppData\\Local\\Temp",
+      "C:\\Users\\MASASH~1.OND\\AppData\\Local\\Temp"
     ]
   },
   "hooks": {
