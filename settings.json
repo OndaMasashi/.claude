@@ -115,6 +115,15 @@
             "command": "bash ~/.claude/hooks/post-commit-simplify.sh"
           }
         ]
+      },
+      {
+        "matcher": "Skill",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash ~/.claude/hooks/skill-usage-log.sh"
+          }
+        ]
       }
     ]
   },

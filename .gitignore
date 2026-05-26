@@ -33,3 +33,7 @@ plugins/install-counts-cache.json
 # Machine-specific config (template only)
 channels/telegram/access.json
 channels/telegram/bot.pid
+
+# Skills are managed in a separate repository (C:\work\utility\skills-main)
+# and exposed here via Windows junctions in skills/.
+skills/

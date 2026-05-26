@@ -11,8 +11,12 @@
 
 ## スキル
 
-スキル一覧は @~/.claude/skills-catalog.md を参照。
-ユーザーの指示がスキルに該当する場合、該当 SKILL.md を読み込んで従うこと。
+スキルは `~/.claude/skills/` 配下から Claude Code が自動発見し、Skill ツール経由で発火する（ネイティブ経路）。
+実体は `C:\work\utility\skills-main\skills-main\skills\` で、各スキル毎に junction で参照されている。新規追加・リネーム・削除を行ったら必ず
+`pwsh C:\work\utility\skills-main\skills-main\skills\sync_skill_junctions.ps1` で junction を同期すること。
+
+人間用閲覧資料として `~/.claude/skills-catalog.md` を引き続き保守しているが、システムプロンプトへの auto-include はしていない（L1 コンテキスト削減のため）。必要時のみ Read ツールで参照する。
+詳細な運用ルールはリポジトリの `c:\work\utility\skills-main\CLAUDE.md` を参照。
 
 ## ナレッジ参照先
 
