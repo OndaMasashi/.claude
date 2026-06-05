@@ -31,6 +31,9 @@ sessions/
 plugins/install-counts-cache.json
 security/
 
+# 手動コピー由来の誤生成ファイル（残置するが追跡しない）
+/CLAUDE - コピー.md
+
 # Machine-specific config (template only)
 channels/telegram/access.json
 channels/telegram/bot.pid
