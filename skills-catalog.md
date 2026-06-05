@@ -51,6 +51,7 @@
 | Tapestry | tapestry | URL→計画, 動画から要約 | URL→コンテンツ抽出+アクションプラン生成 |
 | UI Component Guide | ui-component-guide | コンポーネント選定, ダッシュボード構成 | UIコンポーネント選定・ページ構成提案 |
 | Mermaid Diagram | mermaid-diagram | アーキテクチャ図, Mermaid, フロー図 | Mermaid記法で標準規約に基づくアーキテクチャ図作成 |
+| Architecture Diagram (HTML) | architecture-diagram | アーキ図, サービス連携図, データフロー, インタラクティブHTML | 1枚の自己完結HTMLでサービス/MW連携をアニメ表示。クリック/ステップ実行/モード切替(dev/prod等)対応 |
 | CLAUDE.md Improver | claude-md-improver | CLAUDE.md監査, メモリ最適化 | CLAUDE.mdファイルの品質監査・改善提案 |
 | Claude API | claude-api | Claude API, Anthropic SDK, Agent SDK | |
 | ML Data Guardian | ml-data-guardian | 特徴量検証, 提出前チェック, パイプライン実行 | MLパイプラインのtrain/test整合性チェックを能動的に提案 |

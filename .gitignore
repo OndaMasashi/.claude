@@ -29,6 +29,7 @@ nul
 plugins/marketplaces/claude-plugins-official/
 sessions/
 plugins/install-counts-cache.json
+security/
 
 # Machine-specific config (template only)
 channels/telegram/access.json
