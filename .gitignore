@@ -33,6 +33,7 @@ security/
 
 # 手動コピー由来の誤生成ファイル（残置するが追跡しない）
 /CLAUDE - コピー.md
+/CLAUDE - コピー (2).md
 
 # Machine-specific config (template only)
 channels/telegram/access.json
