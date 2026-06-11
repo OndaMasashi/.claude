@@ -1,5 +1,5 @@
 ---
-last_updated: 2026-06-05
+last_updated: 2026-06-07
 update_schedule: 毎週日曜 00:00 (Windows タスクスケジューラによる自動更新)
 update_script: ~/.claude/scripts/update-tech-versions.sh
 sources: ~/.claude/tech-versions-sources.tsv
@@ -52,9 +52,9 @@ sources: ~/.claude/tech-versions-sources.tsv
 
 | 技術 | 最新版 |
 |---|---|
-| @anthropic-ai/sdk | 0.100.1 |
-| @anthropic-ai/claude-agent-sdk | 0.3.165 |
-| anthropic (Python) | 0.105.2 |
+| @anthropic-ai/sdk | 0.101.0 |
+| @anthropic-ai/claude-agent-sdk | 0.3.167 |
+| anthropic (Python) | 0.106.0 |
 | openai | 6.42.0 |
 
 ## Anthropic Models
