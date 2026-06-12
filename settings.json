@@ -137,5 +137,5 @@
   },
   "autoUpdatesChannel": "latest",
   "showThinkingSummaries": true,
-  "effortLevel": "xhigh"
+  "effortLevel": "max"
 }

@@ -24,41 +24,41 @@
     "commit-commands@claude-plugins-official": [
       {
         "scope": "user",
-        "installPath": "C:\\Users\\Masashi.Onda\\.claude\\plugins\\cache\\claude-plugins-official\\commit-commands\\bfbe168f8cdf",
-        "version": "bfbe168f8cdf",
+        "installPath": "C:\\Users\\Masashi.Onda\\.claude\\plugins\\cache\\claude-plugins-official\\commit-commands\\65a16c20746f",
+        "version": "65a16c20746f",
         "installedAt": "2026-03-28T03:30:27.789Z",
-        "lastUpdated": "2026-06-11T13:24:39.913Z",
-        "gitCommitSha": "bfbe168f8cdf8d37a916f3ab0a23c769939884aa"
+        "lastUpdated": "2026-06-11T17:20:21.119Z",
+        "gitCommitSha": "65a16c20746ffcfc64e4250d4032689409db4cea"
       }
     ],
     "code-review@claude-plugins-official": [
       {
         "scope": "user",
-        "installPath": "C:\\Users\\Masashi.Onda\\.claude\\plugins\\cache\\claude-plugins-official\\code-review\\bfbe168f8cdf",
-        "version": "bfbe168f8cdf",
+        "installPath": "C:\\Users\\Masashi.Onda\\.claude\\plugins\\cache\\claude-plugins-official\\code-review\\65a16c20746f",
+        "version": "65a16c20746f",
         "installedAt": "2026-03-28T03:30:27.789Z",
-        "lastUpdated": "2026-06-11T13:24:39.929Z",
-        "gitCommitSha": "bfbe168f8cdf8d37a916f3ab0a23c769939884aa"
+        "lastUpdated": "2026-06-11T17:20:21.303Z",
+        "gitCommitSha": "65a16c20746ffcfc64e4250d4032689409db4cea"
       }
     ],
     "hookify@claude-plugins-official": [
       {
         "scope": "user",
-        "installPath": "C:\\Users\\Masashi.Onda\\.claude\\plugins\\cache\\claude-plugins-official\\hookify\\bfbe168f8cdf",
-        "version": "bfbe168f8cdf",
+        "installPath": "C:\\Users\\Masashi.Onda\\.claude\\plugins\\cache\\claude-plugins-official\\hookify\\65a16c20746f",
+        "version": "65a16c20746f",
         "installedAt": "2026-03-28T03:30:27.789Z",
-        "lastUpdated": "2026-06-11T13:24:39.972Z",
-        "gitCommitSha": "bfbe168f8cdf8d37a916f3ab0a23c769939884aa"
+        "lastUpdated": "2026-06-11T17:20:21.194Z",
+        "gitCommitSha": "65a16c20746ffcfc64e4250d4032689409db4cea"
       }
     ],
     "security-guidance@claude-plugins-official": [
       {
         "scope": "user",
-        "installPath": "C:\\Users\\Masashi.Onda\\.claude\\plugins\\cache\\claude-plugins-official\\security-guidance\\2.0.4",
-        "version": "2.0.4",
+        "installPath": "C:\\Users\\Masashi.Onda\\.claude\\plugins\\cache\\claude-plugins-official\\security-guidance\\2.0.6",
+        "version": "2.0.6",
         "installedAt": "2026-05-31T13:04:12.418Z",
-        "lastUpdated": "2026-06-11T00:01:35.772Z",
-        "gitCommitSha": "8c12b6860b395cb44b410ab3ac3abf67369aaccb"
+        "lastUpdated": "2026-06-12T15:41:04.339Z",
+        "gitCommitSha": "65a16c20746ffcfc64e4250d4032689409db4cea"
       }
     ]
   }
