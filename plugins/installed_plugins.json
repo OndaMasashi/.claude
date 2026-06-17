@@ -24,31 +24,31 @@
     "commit-commands@claude-plugins-official": [
       {
         "scope": "user",
-        "installPath": "C:\\Users\\Masashi.Onda\\.claude\\plugins\\cache\\claude-plugins-official\\commit-commands\\65a16c20746f",
-        "version": "65a16c20746f",
+        "installPath": "C:\\Users\\Masashi.Onda\\.claude\\plugins\\cache\\claude-plugins-official\\commit-commands\\2ecc7548d05b",
+        "version": "2ecc7548d05b",
         "installedAt": "2026-03-28T03:30:27.789Z",
-        "lastUpdated": "2026-06-11T17:20:21.119Z",
-        "gitCommitSha": "65a16c20746ffcfc64e4250d4032689409db4cea"
+        "lastUpdated": "2026-06-12T17:37:32.884Z",
+        "gitCommitSha": "2ecc7548d05b32b4858aebad42575492ebadee1a"
       }
     ],
     "code-review@claude-plugins-official": [
       {
         "scope": "user",
-        "installPath": "C:\\Users\\Masashi.Onda\\.claude\\plugins\\cache\\claude-plugins-official\\code-review\\65a16c20746f",
-        "version": "65a16c20746f",
+        "installPath": "C:\\Users\\Masashi.Onda\\.claude\\plugins\\cache\\claude-plugins-official\\code-review\\2ecc7548d05b",
+        "version": "2ecc7548d05b",
         "installedAt": "2026-03-28T03:30:27.789Z",
-        "lastUpdated": "2026-06-11T17:20:21.303Z",
-        "gitCommitSha": "65a16c20746ffcfc64e4250d4032689409db4cea"
+        "lastUpdated": "2026-06-12T17:37:32.897Z",
+        "gitCommitSha": "2ecc7548d05b32b4858aebad42575492ebadee1a"
       }
     ],
     "hookify@claude-plugins-official": [
       {
         "scope": "user",
-        "installPath": "C:\\Users\\Masashi.Onda\\.claude\\plugins\\cache\\claude-plugins-official\\hookify\\65a16c20746f",
-        "version": "65a16c20746f",
+        "installPath": "C:\\Users\\Masashi.Onda\\.claude\\plugins\\cache\\claude-plugins-official\\hookify\\2ecc7548d05b",
+        "version": "2ecc7548d05b",
         "installedAt": "2026-03-28T03:30:27.789Z",
-        "lastUpdated": "2026-06-11T17:20:21.194Z",
-        "gitCommitSha": "65a16c20746ffcfc64e4250d4032689409db4cea"
+        "lastUpdated": "2026-06-12T17:37:32.940Z",
+        "gitCommitSha": "2ecc7548d05b32b4858aebad42575492ebadee1a"
       }
     ],
     "security-guidance@claude-plugins-official": [

@@ -137,5 +137,6 @@
   },
   "autoUpdatesChannel": "latest",
   "showThinkingSummaries": true,
-  "effortLevel": "max"
+  "effortLevel": "max",
+  "model": "opus[1m]"
 }

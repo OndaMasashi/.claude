@@ -20,6 +20,11 @@ description: プロジェクト内の各種 MD ファイル（CLAUDE.md / README
 2. **README.md**（プロジェクトルート）— 概要・セットアップ・使い方の最新化
 3. **INDEX.md**（`docs/` `docs_ja/` 等の配下に存在する場合）— ファイル一覧・ページ数・取得日の最新化
 4. **ROADMAP.md / ROADMAP.*.md / roadmap.md** およびそれに準ずるファイル（`PLAN.md`, `MILESTONES.md`, `TODO.md`, `plan.md`, `docs/roadmap/*.md` 等）— マイルストーン達成状況・次ステップ・優先度の最新化
+   - **運用ルール**（グローバル CLAUDE.md「ROADMAP の運用」に準拠）:
+     - **未対応/予定タスクを常に上部**に保つ。各タスクは「深刻度・概要・該当箇所・（あれば）根拠ドキュメントへのリンク」を 1〜数行で簡潔に（本文の詳細は書かない）
+     - 新たな TODO・監査指摘・将来機能が出たら「未対応タスク」へ即追記（埋もれ防止が最優先）
+     - **完了したタスクは結果・詳細を ROADMAP に書かない**。詳細は `improvement_list/YYYY-MM-DD_{説明}.md` に記録し、ROADMAP 側はタスクを「完了タスク」へ移して**該当ファイルへのリンクのみ**を張る
+     - 調査・監査など修正を伴わない作業も、詳細は `improvement_list/` に置き ROADMAP からリンクする
 5. **memory/** 配下（`~/.claude/projects/{project-slug}/memory/` の MEMORY.md + `*.md`）— 今セッションで判明した知見・参照先の追加
 
 ### 手順
@@ -35,6 +40,7 @@ description: プロジェクト内の各種 MD ファイル（CLAUDE.md / README
    - README.md の概要・セットアップ手順の古さ
    - INDEX.md のページ数・更新日・新規ページ
    - ROADMAP / PLAN / MILESTONES のマイルストーン達成状況・未消化タスク・優先順位変更（直近コミットや完了済み PR から逆算して `[ ]` → `[x]` 更新、不要になった項目の削除）
+     - 完了が判明したタスクは ROADMAP 内に詳細を書かず、対応する `improvement_list/` のファイルを確認（無ければ作成を提案）し、「完了タスク」セクションへリンク付きで移動する
    - memory/MEMORY.md の更新履歴表に追記すべき新しい作業、または新しく判明した "非自明な知見"（コードを読めば分かることは保存しない）
 
 3. **更新の実行**
