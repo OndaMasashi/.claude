@@ -2,7 +2,8 @@
   "env": {
     "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1",
     "CLAUDE_CODE_SUBPROCESS_ENV_SCRUB": "1",
-    "CLAUDE_CODE_ENABLE_AWAY_SUMMARY": "1"
+    "CLAUDE_CODE_ENABLE_AWAY_SUMMARY": "1",
+    "MCP_TIMEOUT": "120000"
   },
   "permissions": {
     "allow": [
@@ -137,6 +138,6 @@
   },
   "autoUpdatesChannel": "latest",
   "showThinkingSummaries": true,
-  "effortLevel": "max",
+  "effortLevel": "xhigh",
   "model": "opus[1m]"
 }
