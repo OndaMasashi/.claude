@@ -3,7 +3,8 @@
     "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1",
     "CLAUDE_CODE_SUBPROCESS_ENV_SCRUB": "1",
     "CLAUDE_CODE_ENABLE_AWAY_SUMMARY": "1",
-    "MCP_TIMEOUT": "120000"
+    "MCP_TIMEOUT": "120000",
+    "PYTHONUTF8": "1"
   },
   "permissions": {
     "allow": [
@@ -133,7 +134,7 @@
     "code-simplifier@claude-plugins-official": true,
     "commit-commands@claude-plugins-official": true,
     "code-review@claude-plugins-official": true,
-    "hookify@claude-plugins-official": true,
+    "hookify@claude-plugins-official": false,
     "security-guidance@claude-plugins-official": true
   },
   "autoUpdatesChannel": "latest",
