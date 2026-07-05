@@ -1,5 +1,5 @@
 ---
-last_updated: 2026-06-28
+last_updated: 2026-07-05
 update_schedule: 毎週日曜 00:00 (Windows タスクスケジューラによる自動更新)
 update_script: ~/.claude/scripts/update-tech-versions.sh
 sources: ~/.claude/tech-versions-sources.tsv
@@ -16,18 +16,18 @@ sources: ~/.claude/tech-versions-sources.tsv
 
 | 技術 | 最新版 |
 |---|---|
-| Next.js | 16.2.9 |
+| Next.js | 16.2.10 |
 | React | 19.2.7 |
 | Vue | 3.5.39 |
 | Nuxt | 4.4.8 |
-| SvelteKit | 2.68.0 |
-| Vite | 8.1.0 |
+| SvelteKit | 2.69.1 |
+| Vite | 8.1.3 |
 
 ## Styling
 
 | 技術 | 最新版 |
 |---|---|
-| Tailwind CSS | 4.3.1 |
+| Tailwind CSS | 4.3.2 |
 
 ## Language / Runtime
 
@@ -45,16 +45,16 @@ sources: ~/.claude/tech-versions-sources.tsv
 
 | 技術 | 最新版 |
 |---|---|
-| FastAPI | 0.138.1 |
+| FastAPI | 0.139.0 |
 | Hono | 4.12.27 |
 
 ## AI SDK
 
 | 技術 | 最新版 |
 |---|---|
-| @anthropic-ai/sdk | 0.106.0 |
-| @anthropic-ai/claude-agent-sdk | 0.3.195 |
-| anthropic (Python) | 0.112.0 |
+| @anthropic-ai/sdk | 0.110.0 |
+| @anthropic-ai/claude-agent-sdk | 0.3.201 |
+| anthropic (Python) | 0.116.0 |
 | openai | 6.45.0 |
 
 ## Anthropic Models
