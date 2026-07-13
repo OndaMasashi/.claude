@@ -1,8 +1,15 @@
 #!/bin/bash
-# コード自動フォーマット (PostToolUse)
-# Edit/Write 後、対象ファイルが属するプロジェクトに Prettier が
-# 「ローカル導入」されている場合のみ整形する。
-FILE_PATH=$(jq -r '.tool_input.file_path')
+# フォーマット対象のキューイング (PostToolUse: Edit|Write)
+#
+# 【2026-07 方針転換】以前はこの時点で Prettier 整形を実行していた。しかし
+# Edit/Write 直後にディスクが書き換わると、モデルが把握しているファイル像と
+# 乖離し、続く Edit が old_string 不一致で失敗→再 Read ループに陥る事故が
+# あった。そこで整形はターン終了時 (Stop フック: format-on-stop.sh) へ移し、
+# ここでは「整形候補パスをセッション別キューへ追記するだけ」に留める。
+# このスクリプト自体はファイルを一切書き換えない。
+INPUT=$(cat)
+FILE_PATH=$(printf '%s' "$INPUT" | jq -r '.tool_input.file_path // empty')
+SESSION_ID=$(printf '%s' "$INPUT" | jq -r '.session_id // empty')
 
 # 対象拡張子でなければ何もしない
 case "$FILE_PATH" in
@@ -10,25 +17,12 @@ case "$FILE_PATH" in
   *) exit 0 ;;
 esac
 
-# 対象ファイルのディレクトリから上方向へ node_modules/prettier を探す。
-# 見つからなければ no-op（npx キャッシュ/グローバルの prettier は使わない）。
-# 目的: フォーマッタ未導入の PJ で Edit 直後に再整形が走り、モデルのファイル像と
-#       ディスクが乖離して以後の Edit が old_string 不一致で失敗→再 Read ループに
-#       陥る事故を防ぐ。整形はフォーマッタを明示導入した PJ にのみ限定する。
-dir=$(dirname "$FILE_PATH")
-root=""
-while [ -n "$dir" ] && [ "$dir" != "." ] && [ "$dir" != "/" ]; do
-  if [ -f "$dir/node_modules/prettier/package.json" ]; then
-    root="$dir"
-    break
-  fi
-  parent=$(dirname "$dir")
-  [ "$parent" = "$dir" ] && break
-  dir="$parent"
-done
+# session_id が無いとキューをセッション分離できない → 記録せず終了
+[ -z "$SESSION_ID" ] && exit 0
 
-if [ -n "$root" ]; then
-  (cd "$root" && npx --no-install prettier --write "$FILE_PATH" 2>/dev/null) || true
-fi
-
+. "$(dirname "$0")/format-queue-common.sh" 2>/dev/null
+[ -n "$FORMAT_QUEUE_DIR" ] || exit 0   # 共通定義が読めなければ何もしない (壊すより no-op)
+QUEUE_DIR="$FORMAT_QUEUE_DIR"
+mkdir -p "$QUEUE_DIR" 2>/dev/null || exit 0
+printf '%s\n' "$FILE_PATH" >> "$QUEUE_DIR/$SESSION_ID.txt"
 exit 0

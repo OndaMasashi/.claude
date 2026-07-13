@@ -101,7 +101,7 @@
     ],
     "PostToolUse": [
       {
-        "matcher": "Edit|Write",
+        "matcher": "Edit|Write|MultiEdit",
         "hooks": [
           {
             "type": "command",
@@ -124,6 +124,18 @@
           {
             "type": "command",
             "command": "bash ~/.claude/hooks/skill-usage-log.sh"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash ~/.claude/hooks/format-on-stop.sh",
+            "timeout": 120
           }
         ]
       }
