@@ -21,7 +21,8 @@
       "WebSearch",
       "mcp__reverve-rag__semantic_search",
       "mcp__reverve-rag__get_document",
-      "mcp__chrome-devtools__take_snapshot"
+      "mcp__chrome-devtools__take_snapshot",
+      "Bash(npx wrangler d1 execute:*)"
     ],
     "deny": [
       "Edit(c:/Users/Masashi.Onda/.claude/settings.json)",
