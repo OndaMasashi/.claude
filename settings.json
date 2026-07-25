@@ -42,8 +42,10 @@
       "\\tmp",
       "C:\\Users\\Masashi.Onda\\AppData\\Local\\Temp",
       "C:\\Users\\MASASH~1.OND\\AppData\\Local\\Temp"
-    ]
+    ],
+    "defaultMode": "auto"
   },
+  "model": "opus[1m]",
   "hooks": {
     "PreToolUse": [
       {
@@ -148,10 +150,18 @@
     "commit-commands@claude-plugins-official": true,
     "code-review@claude-plugins-official": true,
     "hookify@claude-plugins-official": false,
-    "security-guidance@claude-plugins-official": true
+    "security-guidance@claude-plugins-official": true,
+    "claude-security@claude-plugins-official": true
   },
-  "autoUpdatesChannel": "latest",
-  "showThinkingSummaries": true,
+  "extraKnownMarketplaces": {
+    "claude-plugins-official": {
+      "source": {
+        "source": "github",
+        "repo": "anthropics/claude-plugins-official"
+      }
+    }
+  },
   "effortLevel": "xhigh",
-  "model": "opus[1m]"
+  "autoUpdatesChannel": "latest",
+  "showThinkingSummaries": true
 }
