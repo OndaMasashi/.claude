@@ -1,5 +1,5 @@
 ---
-allowed-tools: Bash(git add:*), Bash(git status:*), Bash(git diff:*), Bash(git log:*), Bash(git commit:*), Bash(git push:*)
+allowed-tools: Write, Bash(git add:*), Bash(git status:*), Bash(git diff:*), Bash(git log:*), Bash(git commit:*), Bash(git push:*), Bash(git rev-parse:*)
 description: コミットして push する
 ---
 
@@ -23,11 +23,14 @@ description: コミットして push する
 
      Co-Authored-By: Claude <noreply@anthropic.com>
      ```
-3. コミットを作成する
-4. リモートに push する
+3. `git rev-parse --absolute-git-dir` を実行し、出力された絶対パスを `<GITDIR>` とする
+4. コミットメッセージを **Write ツール**で `<GITDIR>/CLAUDE_COMMIT_MSG.txt` に書き出し、`git commit -F "<GITDIR>/CLAUDE_COMMIT_MSG.txt"` でコミットする
+5. リモートに push する
 
 ### 注意事項
 - コミットメッセージは必ず日本語で書くこと
 - 直近のコミットメッセージのスタイルに合わせること
-- HEREDOC 形式でコミットメッセージを渡すこと
+- **コミットメッセージをシェル経由で直接渡さないこと**（`git commit -m` / heredoc / PowerShell ヒアストリング `@'...'@` はいずれも禁止）。主シェルが PowerShell の環境ではヒアストリングが壊れてメッセージに `@` が混入する事故が繰り返し起きている。必ず Write ツールでファイルに書き出し `git commit -F` を使うこと
+- メッセージファイルの置き場所は **`git rev-parse --absolute-git-dir` の出力を使うこと**。`.git/` という固定文字列は使ってはいけない: worktree では `.git` はディレクトリではなくファイルなので `.git/CLAUDE_COMMIT_MSG.txt` は "Not a directory" で失敗する。`--absolute-git-dir` は通常リポジトリなら `.../.git`、worktree なら `.../.git/worktrees/<名前>` を返し、どちらも実在する書き込み可能なディレクトリで git の管理対象外（誤ってステージされず、毎回上書きでよい。削除は不要）
+- 出力は絶対パスなので、**同じ絶対パスをそのまま `-F` に渡す**こと（相対パスはカレントディレクトリ次第で壊れる）。Write ツールは BOM なし UTF-8 で書き込むため文字化けしない
 - 全ての操作を1回のレスポンスで完了すること。余計なテキストやメッセージは出力しないこと

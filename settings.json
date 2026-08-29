@@ -38,12 +38,12 @@
       "Edit(/c/Users/Masashi.Onda/.claude/CLAUDE.md)",
       "Write(/c/Users/Masashi.Onda/.claude/CLAUDE.md)"
     ],
+    "defaultMode": "auto",
     "additionalDirectories": [
       "\\tmp",
       "C:\\Users\\Masashi.Onda\\AppData\\Local\\Temp",
       "C:\\Users\\MASASH~1.OND\\AppData\\Local\\Temp"
-    ],
-    "defaultMode": "auto"
+    ]
   },
   "model": "opus[1m]",
   "hooks": {
@@ -142,6 +142,17 @@
           }
         ]
       }
+    ],
+    "UserPromptSubmit": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash ~/.claude/hooks/ja-writing-guard.sh"
+          }
+        ]
+      }
     ]
   },
   "enabledPlugins": {
@@ -161,7 +172,8 @@
       }
     }
   },
-  "effortLevel": "xhigh",
+  "effortLevel": "max",
   "autoUpdatesChannel": "latest",
-  "showThinkingSummaries": true
+  "showThinkingSummaries": true,
+  "agentPushNotifEnabled": true
 }

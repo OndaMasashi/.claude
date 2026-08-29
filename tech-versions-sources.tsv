@@ -23,7 +23,13 @@ AI SDK	@anthropic-ai/sdk	npm view @anthropic-ai/sdk version
 AI SDK	@anthropic-ai/claude-agent-sdk	npm view @anthropic-ai/claude-agent-sdk version
 AI SDK	anthropic (Python)	pip index versions anthropic 2>/dev/null | head -1 | sed -E 's/.*\(([^)]*)\).*/\1/'
 AI SDK	openai	npm view openai version
-# Anthropic Models: 公開レジストリがないため echo で手動管理。新モデル発表時にこの3行を更新して bash ~/.claude/scripts/update-tech-versions.sh を実行
-Anthropic Models	Claude Opus	echo 4.8
-Anthropic Models	Claude Sonnet	echo 4.6
+# Anthropic Models: npm/pip のような公開レジストリが無いため echo で手動管理。
+# ここは自動更新されないので、週次スクリプトが走っていてもこの4行だけは古いまま残る（実際 2026-08-30 に発覚）。
+# 更新手順: 下の行を書き換えて bash ~/.claude/scripts/update-tech-versions.sh を実行。
+# 一次情報: https://platform.claude.com/docs/en/about-claude/models/overview
+# 最終確認: 2026-08-30。Fable 5 が最上位、Opus 5 が複雑なエージェント/コーディング用。
+# Opus 4.8 / 4.7 / 4.6 / 4.5 と Sonnet 4.6 / 4.5 は legacy 扱いに降格済み。
+Anthropic Models	Claude Fable	echo 5
+Anthropic Models	Claude Opus	echo 5
+Anthropic Models	Claude Sonnet	echo 5
 Anthropic Models	Claude Haiku	echo 4.5

@@ -12,6 +12,7 @@
 | Excel (XLSX) | xlsx | | |
 | Word (DOCX) | docx | | |
 | Word文字数 (DOCX Word Count) | docx-word-count | docx文字数カウント | |
+| note貼付HTML | note-html | note投稿用HTML, note貼り付け | Markdown記事をnoteに貼れるHTMLへ変換（表・h4以下を自動変換、タグ選定付き） |
 | PowerPoint (PPTX) | pptx | | |
 | Auto Document Backup | auto_doc_backup | バックアップ, walkthrough保存 | |
 | Google Docs | google-docs | | ドキュメントの作成・検索・テキスト取得・追記・置換 |
@@ -37,6 +38,7 @@
 | Find Skills | find-skills | スキル検索, どんなスキルがある | スキル検索・インストール支援 |
 | WebApp Testing | webapp-testing | UIテスト, E2Eテスト | |
 | Frontend Design | frontend-design | | 個性的・高品質なフロントエンドUI実装 |
+| Impeccable | impeccable | UIを洗練, デザイン批評, 余白/階層を整える | 既存UIの洗練・批評・監査。/impeccable [layout\|polish\|critique\|audit\|typeset...] の24サブコマンド。アンチパターン検出器同梱 |
 | Stripe Integration | stripe-integration | Stripe決済, サブスクリプション | |
 | MoAI Domain Frontend | moai-domain-frontend | Next.js開発, フロントエンド開発 | React19/Next.js16/Vue3.5 開発専門 |
 | Ship-Learn-Next | ship-learn-next | 学習→計画, アウトプット計画 | 学習コンテンツ→実践的Ship計画に変換 |
@@ -88,6 +90,7 @@
 | Internal Comms | internal-comms | 社内告知, 社内文書 | |
 | Slack GIF Creator | slack-gif-creator | GIF生成, Slack用GIF | |
 | Reverve Style Writer | reverve-style-writer | 恩田風, ブログ記事 | |
+| Japanese Longform Writing | japanese-longform-writing | 推敲, 文体診断, 読者向け長文 | ブログ記事・レポートの執筆と推敲。癖カタログ30項目と文体の実測スクリプト（合格ラインは持たずお手本と比較） |
 | Gmail | gmail | | メール検索・閲覧・送信・下書き・ラベル管理 |
 | Google Calendar | google-calendar | 予定管理, カレンダー | カレンダーの予定管理 |
 | Google Chat | google-chat | チャット送信, スペース検索 | チャットメッセージの操作 |
@@ -98,3 +101,34 @@
 | -------- | --------------- | ---------- | ------ |
 | Agriculture Knowledge | agriculture-knowledge | スマート農業, 農地集約 | |
 | SME Consultant | sme-consultant | 経営分析, 事業戦略, SWOT | |
+
+## Marketing & SEO
+
+| スキル | ディレクトリ名 | キーワード | 説明 |
+| -------- | --------------- | ---------- | ------ |
+| Marketing Plan | marketing-plan | マーケ計画, GTM計画, AARRR, fCMO | AARRR 5段階×13セクションの12ヶ月マーケ実行計画を生成 |
+| CRO | cro | コンバージョン改善, CVR, 申込率, LP診断 | 成約率向上のためのページ・フォーム診断 |
+| Copywriting | copywriting | LPコピー, キャッチコピー, 訴求文, CTA文言 | Webページの販売用コピー執筆・改善 |
+| Customer Research | customer-research | 顧客インタビュー分析, VOC, JTBD, ペルソナ | 顧客の発言データから示唆抽出（既存資料の分析＋ネット収集の2モード） |
+| Competitor Profiling | competitor-profiling | 競合分析, 競合調査, 競合比較 | 競合URL→横並び比較可能な構造化プロファイル。Firecrawl/DataForSEO MCP 未導入のためSEO指標は取得不可 |
+| Pricing | pricing | 価格設定, プラン構成, 値上げ, 支払意欲 | 価格・パッケージ設計と料金ページ診断。B2B SaaS前提のため他業態は枠組みのみ流用 |
+| SEO: GEO (AI検索最適化) | seo-geo | AI検索最適化, AI Overviews, Perplexity, llms.txt | 生成AI検索での引用されやすさを最適化 |
+| SEO: Schema | seo-schema | 構造化データ, JSON-LD, リッチリザルト | Schema.org構造化データの検出・検証・生成 |
+
+## Cloudflare / Web Platform
+
+※ Cloudflare公式スキル（[cloudflare/skills](https://github.com/cloudflare/skills) Apache-2.0）。いずれも「事前学習より公式ドキュメント取得を優先する」設計。
+
+| スキル | ディレクトリ名 | キーワード | 説明 |
+| -------- | --------------- | ---------- | ------ |
+| Cloudflare Platform | cloudflare | Workers, Pages, KV, D1, R2 | Cloudflare全般の統合スキル。製品選定の決定木から詳細リファレンスへ誘導 |
+| Wrangler CLI | wrangler | wrangler, デプロイ, Workers CLI | Workers CLIのコマンド・設定・バインディング |
+| Workers Best Practices | workers-best-practices | Workers設計, アンチパターン検出 | Workersコードの本番品質レビュー（ストリーミング・未処理Promise・グローバル状態・シークレット） |
+| Durable Objects | durable-objects | 状態管理, WebSocket, SQLite | ステートフルな協調処理（チャット・ゲーム・予約）の実装とレビュー |
+| Agents SDK | agents-sdk | AIエージェント構築, Workflows | Workers上でのAIエージェント構築（Agent class・durable実行・MCPサーバー） |
+| Sandbox SDK | sandbox-sdk | サンドボックス実行, コードインタプリタ | 信頼できないコードの隔離実行環境の構築 |
+| Cloudflare One | cloudflare-one | ゼロトラスト, SASE, Access, WARP | Zero Trust/SASEの設計・設定・トラブルシュート |
+| Cloudflare One 移行 | cloudflare-one-migrations | Zscaler移行, VPN移行 | Zscaler/Palo Alto/レガシーVPNからCloudflare Oneへの移行計画 |
+| Email Service | cloudflare-email-service | メール送信, SPF/DKIM/DMARC | トランザクションメール送信・受信とメール到達性 |
+| Turnstile Spin | turnstile-spin | CAPTCHA導入, ボット対策 | Turnstileの導入ウィザード（ウィジェット作成→埋め込み→サーバー検証まで） |
+| Web Performance | web-perf | Core Web Vitals, Lighthouse, 表示速度改善 | Chrome DevTools MCP経由での表示性能監査（LCP/INP/CLS） |
