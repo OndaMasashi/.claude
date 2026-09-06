@@ -45,7 +45,6 @@
       "C:\\Users\\MASASH~1.OND\\AppData\\Local\\Temp"
     ]
   },
-  "model": "opus[1m]",
   "hooks": {
     "PreToolUse": [
       {
@@ -156,7 +155,7 @@
     ]
   },
   "enabledPlugins": {
-    "telegram@claude-plugins-official": true,
+    "telegram@claude-plugins-official": false,
     "code-simplifier@claude-plugins-official": true,
     "commit-commands@claude-plugins-official": true,
     "code-review@claude-plugins-official": true,
@@ -172,8 +171,8 @@
       }
     }
   },
-  "effortLevel": "max",
   "autoUpdatesChannel": "latest",
   "showThinkingSummaries": true,
-  "agentPushNotifEnabled": true
+  "agentPushNotifEnabled": true,
+  "effortLevel": "max"
 }

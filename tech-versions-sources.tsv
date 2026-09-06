@@ -27,9 +27,11 @@ AI SDK	openai	npm view openai version
 # ここは自動更新されないので、週次スクリプトが走っていてもこの4行だけは古いまま残る（実際 2026-08-30 に発覚）。
 # 更新手順: 下の行を書き換えて bash ~/.claude/scripts/update-tech-versions.sh を実行。
 # 一次情報: https://platform.claude.com/docs/en/about-claude/models/overview
-# 最終確認: 2026-08-30。Fable 5 が最上位、Opus 5 が複雑なエージェント/コーディング用。
+# 最終確認: 2026-09-06。Fable 5.1 が最上位、Opus 5 が複雑なエージェント/コーディング用。
 # Opus 4.8 / 4.7 / 4.6 / 4.5 と Sonnet 4.6 / 4.5 は legacy 扱いに降格済み。
-Anthropic Models	Claude Fable	echo 5
+# 注意: tech-versions.md は週次で TSV から再生成される。.md を直接編集しても次の日曜に消えるので、
+# 必ずこの TSV を書き換えること（2026-09-05 に .md 側だけ直して翌日に巻き戻った）。
+Anthropic Models	Claude Fable	echo 5.1
 Anthropic Models	Claude Opus	echo 5
 Anthropic Models	Claude Sonnet	echo 5
 Anthropic Models	Claude Haiku	echo 4.5
