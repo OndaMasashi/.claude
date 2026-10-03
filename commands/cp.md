@@ -16,7 +16,7 @@ description: ブランチ作成 + コミット + push + PR 作成
    - ブランチ名の例: `fix/login-validation`, `feature/add-export`, `docs/update-readme`
 2. 変更されたファイルをステージングする（.env, credentials 等の秘密情報ファイルは除外）
 3. 変更内容を分析し、**日本語で**簡潔なコミットメッセージを作成する
-   - 末尾に Anthropic 公式推奨の標準フッター 2 行セットを付与。モデル名は固定しないこと（セッションごとに動作モデルが異なるうえ、モデル世代が変わると帰属が誤情報になる。実際 `Claude Opus 4.8` 固定のまま legacy 入りしていた）:
+   - 末尾に Anthropic 公式推奨の標準フッター 2 行セットを付与。モデル名は固定しないこと（セッションごとに動作モデルが異なるうえ、モデル世代が変わると帰属が誤情報になるため）:
      ```
      🤖 Generated with [Claude Code](https://claude.com/claude-code)
 
@@ -47,4 +47,4 @@ description: ブランチ作成 + コミット + push + PR 作成
 - 本文ファイルの置き場所は **`git rev-parse --absolute-git-dir` の出力を使うこと**。`.git/` という固定文字列は使ってはいけない: worktree では `.git` はディレクトリではなくファイルなので `.git/CLAUDE_PR_BODY.md` は "Not a directory" で失敗する。`--absolute-git-dir` は通常リポジトリなら `.../.git`、worktree なら `.../.git/worktrees/<名前>` を返し、どちらも実在する書き込み可能なディレクトリで git の管理対象外（誤ってステージされず、毎回上書きでよい。削除は不要）
 - 出力は絶対パスなので、**同じ絶対パスをそのまま `-F` / `--body-file` に渡す**こと（相対パスはカレントディレクトリ次第で壊れる）。Write ツールは BOM なし UTF-8 で書き込むため文字化けしない
 - PR タイトルは1行なので `--title "..."` にインラインで渡してよい
-- 全ての操作を1回のレスポンスで完了すること。余計なテキストやメッセージは出力しないこと
+- 途中経過の説明は不要。PR 作成後に、PR の URL（既存 PR に反映された場合はその URL）を1行で報告すること

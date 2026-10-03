@@ -24,6 +24,7 @@
 | CSVデータ分析 | csv-data-summarizer | CSV分析, データ要約 | |
 | データ分析 | data-analysis | EDA, 分析レポート, データ品質チェック | |
 | プロジェクト報告書 | project-report | 総括報告書, プロジェクトレポート | PJ総括報告書をインタビュー形式でDOCX生成 |
+| YouTube取得 | youtube-fetch | 動画の字幕, 文字起こし, 動画の要約 | YouTubeの題名・概要欄・チャプター・時刻つき字幕を1つのMarkdownに取得（映像のコマ切り出し手順付き） |
 
 ## Development
 
@@ -55,7 +56,6 @@
 | Mermaid Diagram | mermaid-diagram | アーキテクチャ図, Mermaid, フロー図 | Mermaid記法で標準規約に基づくアーキテクチャ図作成 |
 | Architecture Diagram (HTML) | architecture-diagram | アーキ図, サービス連携図, データフロー, インタラクティブHTML | 1枚の自己完結HTMLでサービス/MW連携をアニメ表示。クリック/ステップ実行/モード切替(dev/prod等)対応 |
 | CLAUDE.md Improver | claude-md-improver | CLAUDE.md監査, メモリ最適化 | CLAUDE.mdファイルの品質監査・改善提案 |
-| Claude API | claude-api | Claude API, Anthropic SDK, Agent SDK | |
 | ML Data Guardian | ml-data-guardian | 特徴量検証, 提出前チェック, パイプライン実行 | MLパイプラインのtrain/test整合性チェックを能動的に提案 |
 | Test Strategy | test-strategy | テスト戦略, テスト計画, 新規開発, 品質向上, プランモードでテスト観点, カバレッジ改善 | 新規PJ立ち上げ・Plan Modeでテスト戦略（ピラミッド・静的解析・CI・補強領域の採否）を考慮観点として提示 |
 | Subagent-Driven Development | subagent-driven-development | サブエージェント並列実装, 実装プラン分散実行, 二段階レビュー | 実装プランの独立タスクをサブエージェントに分散→spec/code品質の二段階レビューで高速反復 |
@@ -79,6 +79,7 @@
 | Theme Factory | theme-factory | テーマ作成, デザインシステム | 成果物へのカラー・フォントテーマ適用 |
 | Web Artifacts Builder | web-artifacts-builder | インタラクティブデモ, ウィジェット | React製Claude Artifactの構築・バンドル |
 | Imagen | imagen | 画像生成, AI画像作成 | Gemini APIでAI画像生成 |
+| Lite Movie Creator | lite-movie-creator | 動画制作, CM動画, 童話アニメ | 題材ごとにテイストと技術を選び、企画と絵コンテの2回の確認で短い動画を作る（制作基盤: C:\work\lite-movie-creator） |
 | NLM Style Generator | nlm-style-generator | NLMスタイルJSON, NotebookLMスタイル | PDF/画像からNotebookLMスタイルJSON生成 |
 
 ## Communication

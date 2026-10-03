@@ -27,7 +27,7 @@ When in doubt, the surrounding code wins over any generic rule below.
 - Eliminate redundant code and reuse existing helpers/utilities instead of re-implementing.
 - Improve readability through clear variable and function names.
 - Consolidate related logic; remove comments that merely restate obvious code.
-- IMPORTANT: avoid nested ternaries — prefer `switch`/`if`-`else` chains for multiple conditions.
+- Avoid nested ternaries — prefer `switch`/`if`-`else` chains for multiple conditions, because nested ternaries are hard to read.
 - Choose clarity over brevity — explicit code beats dense one-liners.
 
 ## 4. Efficiency (only where it does not hurt clarity)

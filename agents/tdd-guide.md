@@ -47,7 +47,7 @@ npm run test:coverage
 | **Integration** | API endpoints, database operations | Always |
 | **E2E** | Critical user flows (Playwright) | Critical paths |
 
-## Edge Cases You MUST Test
+## Edge Cases to Consider
 
 1. **Null/Undefined** input
 2. **Empty** arrays/strings
@@ -77,9 +77,7 @@ npm run test:coverage
 - [ ] Assertions are specific and meaningful
 - [ ] Coverage is 80%+
 
-For detailed mocking patterns and framework-specific examples, see `skill: tdd-workflow`.
-
-## v1.8 Eval-Driven TDD Addendum
+## Eval-Driven TDD
 
 Integrate eval-driven development into TDD flow:
 

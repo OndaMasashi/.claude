@@ -32,6 +32,6 @@ AI SDK	openai	npm view openai version
 # 注意: tech-versions.md は週次で TSV から再生成される。.md を直接編集しても次の日曜に消えるので、
 # 必ずこの TSV を書き換えること（2026-09-05 に .md 側だけ直して翌日に巻き戻った）。
 Anthropic Models	Claude Fable	echo 5.1
-Anthropic Models	Claude Opus	echo 5
-Anthropic Models	Claude Sonnet	echo 5
+Anthropic Models	Claude Opus	echo 5.5
+Anthropic Models	Claude Sonnet	echo 5.5
 Anthropic Models	Claude Haiku	echo 4.5

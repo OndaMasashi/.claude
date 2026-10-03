@@ -36,7 +36,19 @@
       "Edit(c:/Users/Masashi.Onda/.claude/CLAUDE.md)",
       "Write(c:/Users/Masashi.Onda/.claude/CLAUDE.md)",
       "Edit(/c/Users/Masashi.Onda/.claude/CLAUDE.md)",
-      "Write(/c/Users/Masashi.Onda/.claude/CLAUDE.md)"
+      "Write(/c/Users/Masashi.Onda/.claude/CLAUDE.md)",
+      "mcp__vercel__buy_*",
+      "mcp__vercel__buy_pro",
+      "mcp__vercel__buy_credits",
+      "mcp__vercel__buy_addon",
+      "mcp__vercel__buy_domain",
+      "mcp__vercel__deploy_to_vercel",
+      "mcp__vercel__import-claude-design-from-url",
+      "mcp__vercel__get_access_to_vercel_url",
+      "mcp__vercel__change_toolbar_thread_resolve_status",
+      "mcp__vercel__reply_to_toolbar_thread",
+      "mcp__vercel__edit_toolbar_message",
+      "mcp__vercel__add_toolbar_reaction"
     ],
     "defaultMode": "auto",
     "additionalDirectories": [
@@ -171,8 +183,15 @@
       }
     }
   },
+  "modelSettings": {
+    "claude-opus-5": {
+      "effortLevel": "xhigh"
+    },
+    "claude-opus-5-5": {
+      "effortLevel": "xhigh"
+    }
+  },
   "autoUpdatesChannel": "latest",
   "showThinkingSummaries": true,
-  "agentPushNotifEnabled": true,
-  "effortLevel": "max"
+  "agentPushNotifEnabled": true
 }
