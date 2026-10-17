@@ -1,8 +1,9 @@
 #!/bin/bash
 # Block direct `git worktree remove` invocations to enforce the
 # safe-worktree-remove.sh wrapper. Without the wrapper, NTFS junctions
-# inside the worktree (backend/.venv, frontend/node_modules) get followed
-# during deletion and the main targets get silently emptied.
+# inside the worktree (shared node_modules, .venv, ...) get followed during
+# deletion and the main targets get silently emptied. The wrapper unlinks
+# every junction / directory symlink in the worktree first.
 # See ~/.claude/projects/c--work-FX-auto-trader/memory/tech_gotcha_backend_venv_corruption.md
 COMMAND=$(jq -r '.tool_input.command')
 
@@ -16,7 +17,7 @@ if echo "$COMMAND" | grep -qE '\bgit[[:space:]]+worktree[[:space:]]+remove\b'; t
     hookSpecificOutput: {
       hookEventName: "PreToolUse",
       permissionDecision: "deny",
-      permissionDecisionReason: "Direct \"git worktree remove\" is blocked. NTFS junctions inside worktrees (backend/.venv, frontend/node_modules) get followed during deletion and silently EMPTY the main targets. Use the wrapper instead:\n  bash ~/.claude/scripts/safe-worktree-remove.sh <worktree-path> [--force]\nBackground: ~/.claude/projects/c--work-FX-auto-trader/memory/tech_gotcha_backend_venv_corruption.md"
+      permissionDecisionReason: "Direct \"git worktree remove\" is blocked. NTFS junctions inside worktrees (shared node_modules, .venv, ...) get followed during deletion and silently EMPTY the main targets. The wrapper checks that git will accept the removal, then unlinks every junction / directory symlink in the worktree before removing it. Use the wrapper instead:\n  bash ~/.claude/scripts/safe-worktree-remove.sh <worktree-path> [--force]\nBackground: ~/.claude/projects/c--work-FX-auto-trader/memory/tech_gotcha_backend_venv_corruption.md"
     }
   }'
   exit 0
