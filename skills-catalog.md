@@ -79,7 +79,7 @@
 | Theme Factory | theme-factory | テーマ作成, デザインシステム | 成果物へのカラー・フォントテーマ適用 |
 | Web Artifacts Builder | web-artifacts-builder | インタラクティブデモ, ウィジェット | React製Claude Artifactの構築・バンドル |
 | Imagen | imagen | 画像生成, AI画像作成 | Gemini APIでAI画像生成 |
-| Lite Movie Creator | lite-movie-creator | 動画制作, CM動画, 童話アニメ | 題材ごとにテイストと技術を選び、企画と絵コンテの2回の確認で短い動画を作る（制作基盤: C:\work\lite-movie-creator） |
+| Lite Movie Creator | lite-movie-creator | 動画制作, CM動画, MV | 題材ごとにテイストと技術を選び、短い動画や本人の曲の MV を作る。確認は企画の1回で、演出の判定は監督役エージェント（制作基盤: C:\work\lite-movie-creator） |
 | NLM Style Generator | nlm-style-generator | NLMスタイルJSON, NotebookLMスタイル | PDF/画像からNotebookLMスタイルJSON生成 |
 
 ## Communication
