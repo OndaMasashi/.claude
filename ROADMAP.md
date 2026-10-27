@@ -9,10 +9,11 @@
 
 ## 未対応タスク
 
-> 現在登録なし。新たな TODO・監査指摘・将来機能が出たらここへ追記して埋もれを防ぐ。
+> 新たな TODO・監査指摘・将来機能が出たらここへ追記して埋もれを防ぐ。
 
 | 深刻度 | 概要 | 該当箇所 | 根拠ドキュメント |
 | :--- | :--- | :--- | :--- |
+| 🟡 中 | 各プロジェクトの memory（62件・約9MB）が PC にしか無い。公開中の本リポジトリには入れず、退避先（別の非公開リポジトリ等）を決めて定期コピーする。メールアドレス・password 等の記述があるファイルは push 前に中身を確認 | `projects/*/memory/`（`.gitignore` の `projects/` で除外中） | - |
 <!-- 例: | 🔴 高 | API キーがログに出力される | src/api/client.ts | improvement_list/2026-06-11_security-audit.md -->
 
 ## 完了タスク
@@ -21,4 +22,5 @@
 
 | 完了日 | 概要 | 記録 |
 | :--- | :--- | :--- |
+| 2026-10-27 | 週次 Dependabot メールの無人 Claude から Bash 等の道具を外した | [improvement_list/2026-10-27_dependabot-weekly-restrict-tools.md](improvement_list/2026-10-27_dependabot-weekly-restrict-tools.md) |
 <!-- 例: | 2026-06-11 | セキュリティ監査の指摘対応 | improvement_list/2026-06-11_security-audit.md -->

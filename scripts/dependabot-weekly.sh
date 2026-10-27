@@ -158,7 +158,9 @@ fi
 
 # --- Phase 5: Claude に JSON を文章にさせて Gmail で送る ---
 # 第三者の文面（example など）に仕込まれた指示に従っても被害が出ないよう、仕組みで縛る:
-# ファイルを読む道具は渡さず JSON はプロンプトに直接入れる。送信は宛先が $TO だけのときしか通さない。
+# --tools "" で組み込みの道具（Bash・Read・WebFetch など）を外し、JSON はプロンプトに直接入れる
+# （ユーザー設定の自動許可も読み込まれるため、--allowedTools だけでは他の道具を止められない）。
+# 送信は宛先が $TO だけのときしか通さない。
 # 送信に成功したかは、送信後に走るフックが残す sent.json の有無で確かめる（Claude の自己申告は使わない）
 printf '%s\n' '#!/bin/bash' \
   "jq -e --arg to $(printf '%q' "$TO") '(.tool_input.to == [\$to]) and ((.tool_input.cc // []) == []) and ((.tool_input.bcc // []) == []) and (.tool_input.draftId == null) and ((.tool_input.attachments // []) == [])' >/dev/null && exit 0" \
@@ -194,7 +196,7 @@ cat "$REPORT"
 # git 管理外の一時フォルダで起動し、プロジェクトの CLAUDE.md や設定を拾わせない
 # （ユーザー設定のフックと全体の CLAUDE.md は読み込まれる。起動時フックの件数通知は止める）
 cd "$TMPDIR" || fail "一時フォルダに移れない"
-CLAUDE_DEPENDABOT_HOOK=off "$CLAUDE" -p --model sonnet --permission-mode dontAsk \
+CLAUDE_DEPENDABOT_HOOK=off "$CLAUDE" -p --model sonnet --permission-mode dontAsk --tools "" \
   --settings "$(cygpath -m "$TMPDIR/settings.json")" \
   --allowedTools "mcp__claude_ai_Gmail__send_message" < "$TMPDIR/prompt.txt"
 rc=$?
