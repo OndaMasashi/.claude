@@ -13,7 +13,8 @@
 
 | 深刻度 | 概要 | 該当箇所 | 根拠ドキュメント |
 | :--- | :--- | :--- | :--- |
-| 🟡 中 | 各プロジェクトの memory（62件・約9MB）が PC にしか無い。公開中の本リポジトリには入れず、退避先（別の非公開リポジトリ等）を決めて定期コピーする。メールアドレス・password 等の記述があるファイルは push 前に中身を確認 | `projects/*/memory/`（`.gitignore` の `projects/` で除外中） | - |
+| 🟡 中 | memory 退避先の GitHub に、トークン入りの消した commit が SHA 指定で残っている。元のプロジェクトのリポジトリ履歴にも同じトークンがある（作り直すか、リポジトリを作り直すかは本人判断） | 退避先リポジトリ／元プロジェクトのリポジトリ | [improvement_list/2026-10-27_memory-backup.md](improvement_list/2026-10-27_memory-backup.md) |
+| 🔵 低 | memory 退避スクリプトの様子見の指摘7件（大幅な減少で止まらない、1件の秘密で全体が止まる、同時実行への備えなし など） | `scripts/memory-backup.sh`, `hooks/dependabot-alerts.sh` | [improvement_list/2026-10-27_memory-backup.md](improvement_list/2026-10-27_memory-backup.md) |
 <!-- 例: | 🔴 高 | API キーがログに出力される | src/api/client.ts | improvement_list/2026-06-11_security-audit.md -->
 
 ## 完了タスク
@@ -22,5 +23,6 @@
 
 | 完了日 | 概要 | 記録 |
 | :--- | :--- | :--- |
+| 2026-10-27 | 各プロジェクトの memory を非公開リポジトリへ毎日退避する仕組みを追加 | [improvement_list/2026-10-27_memory-backup.md](improvement_list/2026-10-27_memory-backup.md) |
 | 2026-10-27 | 週次 Dependabot メールの無人 Claude から Bash 等の道具を外した | [improvement_list/2026-10-27_dependabot-weekly-restrict-tools.md](improvement_list/2026-10-27_dependabot-weekly-restrict-tools.md) |
 <!-- 例: | 2026-06-11 | セキュリティ監査の指摘対応 | improvement_list/2026-06-11_security-audit.md -->

@@ -3,6 +3,7 @@
 # 件数を Claude に伝え、ユーザーへの報告と対応の提案を促す。開発用の依存や medium / low だけなら黙る
 # （それらは GitHub のアラート一覧で見る。週次メールにも公開していないリポジトリは件数だけ載る）。
 # 週次メール（~/.claude/scripts/dependabot-weekly.sh）が前回失敗していれば、リポジトリに関係なくそれも伝える。
+# memory の退避（~/.claude/scripts/memory-backup.sh）が 3 日以上成功していないときも同じく伝える。
 # GitHub リポジトリでない・gh 未認証・アラート無効・通信失敗のときは何も出力しない。常に exit 0。
 # 自動実行のジョブからは CLAUDE_DEPENDABOT_HOOK=off で止められる。
 # Windows の Git Bash は外部コマンドの起動1回ごとにセッション開始が遅れるため、
@@ -22,6 +23,21 @@ failed_flag="$HOME/.claude/cache/dependabot-weekly/FAILED"
 if [ -f "$failed_flag" ]; then
   notice="週次の Dependabot メールが届いていません（$(<"$failed_flag")）。~/.claude/cache/dependabot-weekly/run.log を確認してください。"
   context="[Dependabot 週次ジョブ] $notice"
+fi
+
+# memory の退避は毎日 12:00。スクリプトの失敗だけでなく、PC が切れていた・タスクが消えた・push が通らない、
+# のどれでも last-success が古くなる。記録が無い・壊れているときも知らせる
+backup_stamp="$HOME/.claude/cache/memory-backup/last-success"
+last=0
+[ -f "$backup_stamp" ] && read -r last < "$backup_stamp"
+[[ $last =~ ^[0-9]+$ ]] && last=$((10#$last)) || last=0
+printf -v now '%(%s)T' -1
+days=$(( (now - last) / 86400 ))
+if (( days >= 3 )); then
+  if (( last == 0 )); then line="memory の退避が成功した記録がありません。"; else line="memory の退避が ${days} 日成功していません。"; fi
+  line+="~/.claude/cache/memory-backup/run.log とタスクスケジューラの「ClaudeMemoryBackup」を確認してください。"
+  notice=${notice:+$notice }$line
+  context="${context:+$context }[memory 退避] $line"
 fi
 
 # owner/repo を取り出す。GitHub の名前に使える文字だけを通し、\ や .. でキャッシュの置き場所の外を
@@ -70,7 +86,7 @@ jq -n --arg notice "$notice" --arg context "$context" '{
   systemMessage: $notice,
   hookSpecificOutput: {
     hookEventName: "SessionStart",
-    additionalContext: "\($context) ユーザーと対話しているセッションなら、最初の応答でこの件を伝え、対応（依存パッケージの更新や週次ジョブの確認）を提案すること。今の依頼と無関係なら、依頼に答えたあと1〜2行で添えればよい。スラッシュコマンドやスクリプトから自動で起動された作業なら、この件には触れない。"
+    additionalContext: "\($context) ユーザーと対話しているセッションなら、最初の応答でこの件を伝え、対応（依存パッケージの更新や定期ジョブの確認）を提案すること。今の依頼と無関係なら、依頼に答えたあと1〜2行で添えればよい。スラッシュコマンドやスクリプトから自動で起動された作業なら、この件には触れない。"
   }
 }'
 exit 0
