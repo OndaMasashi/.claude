@@ -1,0 +1,3 @@
+# 新しい PC で clone し直しても、この PC と同じ LF で取り出す。
+# Windows の git の既定（core.autocrlf=true）では CRLF に変わり、bash が read で読むデータの行末に CR が残る
+* text=auto eol=lf
